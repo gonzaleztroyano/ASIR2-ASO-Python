@@ -49,4 +49,17 @@ lista[0] = "hola mari puri"
 print(lista[0])
 lista.append("pepe")
 print(lista[-1])
+
+# Insertar elementos en listas.
+print(lista[0:3])
 print(lista.count("pepe"))
+lista.insert(1,"cadena")
+print(lista[0:3])
+
+
+nombres = ["Jose","Eva","Ana","Eva","Luis","Eva","Fernando","Eva","Susana"]
+print(nombres.count("Eva"))
+print(nombres.index("Jose"))
+print(nombres.index("Eva"))
+print(nombres.index("Eva",4,7))
+
