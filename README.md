@@ -18,6 +18,9 @@ Pablo González - 2º ASIR
     * Diccionarios/Tablas hash
     * **Ex**: [pruebas con diccionarios](./ejemplos/220126-2.py)
 
+* [Apuntes 220131](./apuntes/220131.md)
+    * Ranges, estructuras de control y matrices
+    * **Ex**: [Cosa rara gestión alumnos](./ejemplos/220131.py)
 
 ## Licencia
 Esta obra se publica bajo la licenca Creative Commons BY 4.0 Internacional.
