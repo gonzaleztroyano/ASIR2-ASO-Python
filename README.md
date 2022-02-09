@@ -22,6 +22,13 @@ Pablo González - 2º ASIR
     * Ranges, estructuras de control y matrices
     * **Ex**: [Cosa rara gestión alumnos](./ejemplos/220131.py)
 
+* [Ejercicio 220207-1.py](./ejemplos/220207-1.py)
+    * Printar y pasar a funciones múltiples y desconocidos diccionarios o listas dentro de una función.
+    * Funciones
+* [Apuntes 220209-1](./apuntes/220209-1.md)
+    * Programación orientada a objetos
+    * Características, Eventos y métodos de objetos. 
+
 ## Licencia
 Esta obra se publica bajo la licenca Creative Commons BY 4.0 Internacional.
 
