@@ -27,14 +27,14 @@ def listar():
 def altas():
     print("     ALTAS     ")
     print("---------------")
-    dni = input("DNI:")
-    nombre = input("NOMBRE:")
-    apellido = input("APE:")
-    edad = int(input("EDAD:"))
-    curso = int(input("CURSO:"))
-    nota1 = float(input("NOTA-1:"))
-    nota2 = float(input("NOTA-2:"))
-    nota3 = float(input("NOTA-3:"))
+    dni = input("DNI: ")
+    nombre = input("NOMBRE: ")
+    apellido = input("APE: ")
+    edad = int(input("EDAD: "))
+    curso = int(input("CURSO: "))
+    nota1 = float(input("NOTA-1: "))
+    nota2 = float(input("NOTA-2: "))
+    nota3 = float(input("NOTA-3: "))
     # Añadir un valor a un diccionario
     alumnos.update({dni: {}})
     # Cargamos los datos del diccionario
@@ -53,7 +53,7 @@ def altas():
     input("Pulse cualquier tecla para volver al menú...")
 
 def bajas():
-    #os.system("clear")
+    os.system("clear")
     print("     BAJAS     ")
     print("---------------")
     print("")
@@ -70,14 +70,10 @@ def bajas():
         else:
             print("¡Recibido! No se ha eliminado el registro")
             opt_bajas = input("Pulse cualquier tecla para reintentarlo. O 's' para salir ")
-            print(opt_bajas)
-            input("P")
             if opt_bajas.lower() != "s":
-                input("X")
-                #bajas()
+                bajas()
             else:
-                input("Y")
-                print("")
+                return
     else:
         print("El registro no se ha encontrado.")
         opt_bajas = input("Pulse cualquier tecla para reintentarlo. O 's' para salir ")
@@ -90,10 +86,83 @@ def bajas():
 def modificar():
     print("   MODIFICAR   ")
     print("---------------")
-
+    print("Para modificar, elimine el registro y vuelva a darlo de alta")
+    input("¡Gracias! Pulse cualquier tecla para continuar...")
+    return
+    
 def consultar():
     print("   CONSULTAR   ")
     print("---------------")
+    print("Se puede buscar por DNI(D), Nombre(N) y Apellidos(A)")
+    opt = ""
+    while opt.upper() not in ("D","N","A","S"):
+        opt = input("Escoja una opción (D/N/A/Salir): ")
+        if opt == "D":
+            dni_a_buscar = input("Introduzca el DNI a buscar: ")
+            found = False
+            for dni in alumnos.keys():
+                if dni_a_buscar in dni:
+                    found = True
+                    print("")
+                    print("Datos encontrados:")
+                    print("   Nombre:   ", alumnos[dni]['nombre'])
+                    print("   Apellido: ", alumnos[dni]['ape'])
+                    print("   Edad:     ", alumnos[dni]['edad'])
+                    print("   Curso:    ", alumnos[dni]['curso'])
+                    print("   Notas:    ", alumnos[dni]['notas'])
+                    input("Pulse cualquier tecla para seguir buscando ")
+            if found == False:
+                print("No se ha encontrado ningún registro con los valores indicados.")
+                input("Pulse cualquier tecla para volver al menú. ")
+                return
+            else:
+                print("Fin de la búsqueda")
+                input("Pulse cualquier tecla para volver al menú. ")
+                return
+        if opt == "N":
+            nombre_a_buscar = input("Introduzca el nombre a buscar: ")
+            found = False
+            for dni in alumnos.keys():
+                if nombre_a_buscar in alumnos[dni]['nombre']:
+                    found = True
+                    print("")
+                    print("Datos encontrados:")
+                    print("   Nombre:   ", alumnos[dni]['nombre'])
+                    print("   Apellido: ", alumnos[dni]['ape'])
+                    print("   Edad:     ", alumnos[dni]['edad'])
+                    print("   Curso:    ", alumnos[dni]['curso'])
+                    print("   Notas:    ", alumnos[dni]['notas'])
+                    input("Pulse cualquier tecla para seguir buscando ")
+            if found == False:
+                print("No se ha encontrado ningún registro con los valores indicados.")
+                input("Pulse cualquier tecla para volver al menú. ")
+                return
+            else:
+                print("Fin de la búsqueda")
+                input("Pulse cualquier tecla para volver al menú. ")
+                return
+        if opt == "A":
+            ape_a_buscar = input("Introduzca el apellido a buscar: ")
+            found = False
+            for dni in alumnos.keys():
+                if ape_a_buscar in alumnos[dni]['ape']:
+                    found = True
+                    print("")
+                    print("Datos encontrados:")
+                    print("   Nombre:   ", alumnos[dni]['nombre'])
+                    print("   Apellido: ", alumnos[dni]['ape'])
+                    print("   Edad:     ", alumnos[dni]['edad'])
+                    print("   Curso:    ", alumnos[dni]['curso'])
+                    print("   Notas:    ", alumnos[dni]['notas'])
+                    input("Pulse cualquier tecla para seguir buscando ")
+            if found == False:
+                print("No se ha encontrado ningún registro con los valores indicados.")
+                input("Pulse cualquier tecla para volver al menú. ")
+                return
+            else:
+                print("Fin de la búsqueda")
+                input("Pulse cualquier tecla para volver al menú. ")
+                return
 
 
 op = 0
@@ -104,10 +173,10 @@ while op != 6:
     print("       1. ALTAS")
     print("       2. BAJAS")
     print("       3. MODIFICAR NOTAS")
-    print("       4. CONSULTAR NOTAS")
+    print("       4. CONSULTAR ALUMNADO")
     print("       5. LISTADO")
     print("       6. SALIR")
-    op = int(input("       Seleccione opción:"))
+    op = int(input("       Seleccione opción: "))
 
     if op == 1:
         altas()
