@@ -28,6 +28,9 @@ Pablo González - 2º ASIR
 * [Apuntes 220209-1](./apuntes/220209-1.md)
     * Programación orientada a objetos
     * Características, Eventos y métodos de objetos. 
+* [Apuntes 220214-1](./apuntes/220214-1.md)
+    * Trabajar con ficheros secuenciales. 
+    * [Inicio raro de los ficheros](./apuntes/220214-ini.md), *env* y *encoding*. 
 
 ## Licencia
 Esta obra se publica bajo la licenca Creative Commons BY 4.0 Internacional.
