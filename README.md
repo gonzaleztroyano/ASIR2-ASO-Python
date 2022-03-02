@@ -25,12 +25,24 @@ Pablo González - 2º ASIR
 * [Ejercicio 220207-1.py](./ejemplos/220207-1.py)
     * Printar y pasar a funciones múltiples y desconocidos diccionarios o listas dentro de una función.
     * Funciones
+    * **Ex**: [Definición de la función carrito](./ejemplos/220207-1.py)
+
 * [Apuntes 220209-1](./apuntes/220209-1.md)
     * Programación orientada a objetos
     * Características, Eventos y métodos de objetos. 
-* [Apuntes 220214-1](./apuntes/220214-1.md)
-    * Trabajar con ficheros secuenciales. 
+    * **Ex**: [Definición del objeto canino](./ejemplos/220209-1.py)
+    * **Ex**: [Definición del objeto humano](./ejemplos/220209-2.py)
+    * **Ex**: [Definición del objeto empleado](./ejemplos/220209-3.py)
+    * **Ex**: [Definición de la clase hora](./ejemplos/220301-ClaseHora.py)
+    * **Ex**: [Definición de la clase persona](./ejemplos/persona.py)
+
+* Apuntes 220214-1
+    * [Trabajar con ficheros secuenciales](./apuntes/220214-1.md)
+    * [Compartir información entre las Shell y Python](./apuntes/220214-2.md)
     * [Inicio raro de los ficheros](./apuntes/220214-ini.md), *env* y *encoding*. 
+    
+* [Apuntes 220215](./apuntes/220215.md)
+    * Conexión a Bases de Datos
 
 ## Licencia
 Esta obra se publica bajo la licenca Creative Commons BY 4.0 Internacional.
